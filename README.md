@@ -22,7 +22,7 @@ Steps to Use for Installation:
         
      php artisan key:generate
 
-> 7. Create a New Database Table and Update Database Credentials and Mail Credentials to .env file
+> 7. Create a new Database table and update Database credentials and Mail credentials to .env file
     
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
@@ -45,13 +45,16 @@ Steps to Use for Installation:
     QUEUE_CONNECTION=database
     SUBSCRIBER_SEED_COUNT=10000      (you can change count as per need like 300000 to 400000)
 
-> 9. Run
+> 9. Run  below command to create table and seed tables
      
     php artisan migrate
     php artisan db:seed
+    
+> 10. Run below command to run the project.
+     
     php artisan serve
 
-> 10. Now Start the Queue Listerner or Worker From Below Command (NOTE * - To dispatch Multiple Queue Jobs simultaneously create Multiple Workers)
+> 10. Now Open the Command to start the Queue Listerner or Worker from below command  (NOTE * - To dispatch multiple queue jobs simultaneously create Multiple Workers)
     
     php artisan queue:listen --timeout=0
     OR
@@ -61,13 +64,23 @@ Steps to Use for Installation:
         -- for more info please follow the given link https://laravel.com/docs/8.x/queues#supervisor-configuration
 
 
-> 11. To Enable Auto Job retry add another queue worker
+> 11. To Enable auto job retry add another queue worker
       
     php artisan queue:retry all
 
-> 12. After any changes in code  use below code to restart the queue worker
+> 12. After any changes in code use below code to restart the queue worker
     
     php artisan queue:restart
+
+
+    - Great Your Setup Done!
+
+
+ > 13. Screenshots:
+    
+        ![image](https://user-images.githubusercontent.com/54094045/208312092-b5327989-851d-471f-b496-3cf76bf2e966.png)
+
+        
 
 
      
