@@ -2,6 +2,71 @@
 
 <img src="https://raw.githubusercontent.com/Rajeshrj202/Excel-import/master/logo.png" style="width:200px;Height:200px;"> <h1>M@ilBOX</h1>
 
+Steps to Use for Installation:
+
+> 1. Open your Git Bash/Gui clone from below url
+        
+    git clone https://github.com/Rajeshrj202/laravel-mail.git
+
+> 2. Navigate to laravel mail project root folder and open your terminal 
+
+> 3. Run 
+      
+    composer update (make sure you have composer install already)
+
+> 4. Run 
+      
+      copy .env.example .env
+
+> 5. Run 
+        
+     php artisan key:generate
+
+> 7. Create a New Database Table and Update Database Crdentials and Mail Credential to .env file
+    
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=laravel
+     DB_USERNAME=root
+     DB_PASSWORD=
+
+    MAIL_MAILER=smtp
+    MAIL_HOST=mailhog
+    MAIL_PORT=1025
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS=null
+    MAIL_FROM_NAME="${APP_NAME}" 
+
+ > 8. add below environmental variable to .env
+
+    QUEUE_CONNECTION=database
+    SUBSCRIBER_SEED_COUNT=10000      (you can change count as per need like 300000 to 400000)
+
+> 9. Run
+     
+    php artisan migrate
+    php artisan db:seed
+    php artisan serve
+
+> 10. Now Start the Queue Listerner or Worker From Below Command (NOTE * - To dispatch Multiple Queue Jobs simultaneously create Multiple Workers)
+    
+    php artisan queue:listen --timeout=0
+    OR
+    php artisan queue:work
+    OR 
+    Install Supervisor for Continous Queue worker running enviornment on Server
+    for more info please follow the given link https://laravel.com/docs/8.x/queues#supervisor-configuration
+
+
+> 11. To Enable Auto Job retry add another queue worker
+      
+    php artisan queue:retry all
+
+
+     
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
