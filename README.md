@@ -22,7 +22,7 @@ Steps to Use for Installation:
         
      php artisan key:generate
 
-> 7. Create a new Database table and update your Database credentials and Mail credentials to .env file
+> 7. Create a new Database and update your Database credentials and Mail credentials to .env file
     
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
@@ -54,13 +54,13 @@ Steps to Use for Installation:
      
     php artisan serve
 
-> 10. Now Open the Command to start the Queue Listerner or Worker from below command  (NOTE * - To dispatch multiple queue jobs simultaneously create Multiple Workers)
+> 10. Now Open the Command to start the Queue Listener or Worker from below command  (NOTE * - To dispatch multiple queue jobs simultaneously create Multiple Workers)
     
     php artisan queue:listen --timeout=0
     OR
     php artisan queue:work
     OR 
-    Install Supervisor for Continous Queue worker running enviornment on Server
+    Install Supervisor for Continuous Queue worker running environment on Server
         -- for more info please follow the given link https://laravel.com/docs/8.x/queues#supervisor-configuration
 
 
