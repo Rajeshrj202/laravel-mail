@@ -4,7 +4,7 @@
 
 Steps to Use for Installation:
 
-> 1. Open your Git Bash/Gui clone from below url
+> 1. Open your Git Bash/GUI to clone repository from below link
         
     git clone https://github.com/Rajeshrj202/laravel-mail.git
 
