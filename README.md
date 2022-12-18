@@ -43,7 +43,8 @@ Steps to Use for Installation:
  > 8. add below environmental variable to .env
 
     QUEUE_CONNECTION=database
-    SUBSCRIBER_SEED_COUNT=10000      (you can change count as per need like 300000 to 400000 or you can use database file directly from below link)                       https://github.com/Rajeshrj202/laravel-mail/blob/master/laravel_mailbox.sql
+    SUBSCRIBER_SEED_COUNT=10000      (you can change count as per need like 300000 to 400000 or you can use database file directly from below link)
+                       https://github.com/Rajeshrj202/laravel-mail/blob/master/laravel_mailbox.sql
 
 > 9. Run  below command to create table and seed tables
      
