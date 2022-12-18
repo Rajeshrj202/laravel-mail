@@ -75,7 +75,7 @@ Steps to Use for Installation:
     php artisan queue:restart
 
 
-   - Great Your Setup is Done!
+   - Great Your Setup is done now you can process the mail by selecting the mail type and submitting the form
 
 
  > 13. Screenshots:
