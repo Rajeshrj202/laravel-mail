@@ -22,7 +22,7 @@ Steps to Use for Installation:
         
      php artisan key:generate
 
-> 7. Create a new Database table and update Database credentials and Mail credentials to .env file
+> 7. Create a new Database table and update your Database credentials and Mail credentials to .env file
     
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
