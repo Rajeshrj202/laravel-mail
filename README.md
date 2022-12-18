@@ -78,7 +78,7 @@ Steps to Use for Installation:
 
  > 13. Screenshots:
     
-   ![image](https://user-images.githubusercontent.com/54094045/208312092-b5327989-851d-471f-b496-3cf76bf2e966.png)
+   ![image](https://user-images.githubusercontent.com/54094045/208312191-b2f62aba-c74a-4474-9d52-f0c59ce39933.png)
 
         
 
