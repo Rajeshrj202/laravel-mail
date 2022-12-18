@@ -22,7 +22,7 @@ Steps to Use for Installation:
         
      php artisan key:generate
 
-> 7. Create a New Database Table and Update Database Crdentials and Mail Credential to .env file
+> 7. Create a New Database Table and Update Database Credentials and Mail Credentials to .env file
     
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
@@ -31,14 +31,14 @@ Steps to Use for Installation:
      DB_USERNAME=root
      DB_PASSWORD=
 
-    MAIL_MAILER=smtp
-    MAIL_HOST=mailhog
-    MAIL_PORT=1025
-    MAIL_USERNAME=null
-    MAIL_PASSWORD=null
-    MAIL_ENCRYPTION=null
-    MAIL_FROM_ADDRESS=null
-    MAIL_FROM_NAME="${APP_NAME}" 
+     MAIL_MAILER=smtp
+     MAIL_HOST=mailhog
+     MAIL_PORT=1025
+     MAIL_USERNAME=null
+     MAIL_PASSWORD=null
+     MAIL_ENCRYPTION=null
+     MAIL_FROM_ADDRESS=null
+     MAIL_FROM_NAME="${APP_NAME}" 
 
  > 8. add below environmental variable to .env
 
@@ -58,12 +58,16 @@ Steps to Use for Installation:
     php artisan queue:work
     OR 
     Install Supervisor for Continous Queue worker running enviornment on Server
-    for more info please follow the given link https://laravel.com/docs/8.x/queues#supervisor-configuration
+        -- for more info please follow the given link https://laravel.com/docs/8.x/queues#supervisor-configuration
 
 
 > 11. To Enable Auto Job retry add another queue worker
       
     php artisan queue:retry all
+
+> 12. After any changes in code  use below code to restart the queue worker
+    
+    php artisan queue:restart
 
 
      
