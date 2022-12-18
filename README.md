@@ -73,7 +73,7 @@ Steps to Use for Installation:
     php artisan queue:restart
 
 
-    - Great Your Setup Done!
+   - Great Your Setup Done!
 
 
  > 13. Screenshots:
